@@ -5,14 +5,14 @@ $(document).ready(() => {
      */
     const urlObject = {
         HOME : "/index.html",
-        CONTACT_URL : "/page/contact.html",
         INTRODUCTION_URL : "/page/introduction.html",
         PRODUCT_SERVICE_URL : "/page/productService.html",
+        CONTACT_URL : "/page/contact.html",
     }
     const gnbUrlArray = [
-        "CONTACT_URL",
         "INTRODUCTION_URL",
-        "PRODUCT_SERVICE_URL"
+        "PRODUCT_SERVICE_URL",
+        "CONTACT_URL",
     ]
 
 /*** DOM */

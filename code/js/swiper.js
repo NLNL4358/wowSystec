@@ -16,6 +16,12 @@ var swiper = new Swiper(".swiper", {
         el: ".swiper-pagination",
       },
 
+    // navigation
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
     // 추가 Effect
     effect: "creative", 
     creativeEffect: {
