@@ -104,7 +104,10 @@ var {
     --small-size: 0.87rem; /* 13px */
 
     --text-title-color : #333;
-    --primary-color : #8DC53E;
+    --primary-color : #3069e2;
+    --secondary-color : #dce9f7;
+    --third-color : #8a8a8a;
+
 }
 
 h1 {

@@ -6,11 +6,17 @@
     <title>WOWSYSTEC</title>
 
     <!-- CSS -->
-     <link rel="stylesheet" href="./css/reset.css">
-     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
 
+    <!-- JQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+     
      <!-- Swiper -->
-     <link
+    <link
      rel="stylesheet"
      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
@@ -22,14 +28,16 @@
         <div class="inner headerInner">
           <div class="header">
             <div class="headerLogoWrap">
-              <h1>LOGO</h1>
+              <button class="logoButton">
+                <h1>LOGO</h1>
+              </button>
             </div>
             <div class="headerNav">
               <ul class="gnbWrap">
                 <li class="gnb">회사 소개</li>
                 <li class="gnb">제품 및 서비스</li>
                 <li class="gnb">문의 하기</li>
-              
+              <!-- 
               <div class="snbWrap">
                 <ul class="snb">
                   <li>회사 비전</li>
@@ -44,7 +52,7 @@
                   <li>문의하기</li>
                   <li>CONTACT</li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -55,13 +63,22 @@
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide" >
-                <img src="./assets/img/1.jpg" alt="">
+                <div class="inner">
+                  <h1>히어로 섹션</h1>
+                </div>
+                <img loading="lazy" src="./assets/img/1.jpg" alt="">
               </div>
               <div class="swiper-slide" >
-                <img src="./assets/img/2.jpg" alt="">
+                <div class="inner">
+                  <h1>서비스 요약 섹션</h1>
+                </div>
+                <img loading="lazy" src="./assets/img/2.jpg" alt="">
               </div>
               <div class="swiper-slide" >
-                <img src="./assets/img/3.jpg" alt="">
+                <div class="inner">
+                  <h1>회사 특징 및 장점</h1>
+                </div>
+                <img loading="lazy" src="./assets/img/3.jpg" alt="">
               </div>
             </div>
             <!-- If we need pagination -->
@@ -76,7 +93,7 @@
 
 
     <!-- JS -->
-     <script src="./js/index.js"></script>
-     <script src="./js/swiper.js"></script>
+     <script src="/js/index.js"></script>
+     <script src="/js/swiper.js"></script>
 </body>
 </html>
