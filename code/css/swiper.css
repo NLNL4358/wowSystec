@@ -2,6 +2,7 @@
 .subSwiper {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .swiper-slide {
   display: flex !important;
@@ -11,12 +12,14 @@
   position: relative;
 }
 .swiper-slide > img {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  opacity: 0.5;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    z-index: -1;
+    opacity: 0.5;
 }
 
 .swiper-pagination {
