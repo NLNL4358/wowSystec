@@ -103,10 +103,12 @@ var {
     --span-size: 1rem; /* 15px */
     --small-size: 0.87rem; /* 13px */
 
-    --text-title-color : #333;
+    --text-title-color : #1D1D1D;
     --primary-color : #3069e2;
     --secondary-color : #dce9f7;
     --third-color : #8a8a8a;
+
+    --background-gray-color : #F9F9F9;
 
 }
 

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/page/main.css">
 
     <!-- JQuery -->
     <script
@@ -26,35 +27,46 @@
 </head>
 <body>
     <div class="outer">
-        <div class="inner mainHeaderInner">
-          <div class="header">
+        <div class="mainHeaderInner">
+          <div class="header white">
             <div class="headerLogoWrap">
               <button class="logoButton">
-                <h1>LOGO</h1>
+                <img class="logoWhite" src="./assets/img/logo.svg" alt="">
+                <img class="logoBlack" src="./assets/img/logoBlack.svg" alt="">
               </button>
             </div>
             <div class="headerNav">
               <ul class="gnbWrap">
-                <li class="gnb">회사 소개</li>
+                <li class="gnb">회사소개</li>
                 <li class="gnb">제품 및 서비스</li>
-                <li class="gnb">문의 하기</li>
+                <li class="gnb">기술역량</li>
+                <li class="gnb">고객사례</li>
+                <li class="gnb">문의하기</li>
               
               <div class="snbWrap">
                 <ul class="snb">
-                  <li>회사 비전</li>
-                  <li>연혁</li>
-                  <li>주요성과</li>
+                  <li>회사 개요</li>
                 </ul>
                 <ul class="snb">
-                  <li>주요 기술 설명</li>
-                  <li>사례 & 프로젝트 소개</li>
+                  <li>임베디드 시스템 개발</li>
+                  <li>제어계측 솔루션</li>
+                  <li>맞춤형 프로젝트 사례</li>
                 </ul>
                 <ul class="snb">
-                  <li>문의하기</li>
-                  <li>CONTACT</li>
+                  <li>핵심 기술 소개</li>
+                  <li>연구 개발 사례</li>
+                  <li>특허 및 인증</li>
+                </ul>
+                <ul class="snb">
+                  <li>성공 사례</li>
+                  <li>고객 후기</li>
+                </ul>
+                <ul class="snb">
+                  <li></li> <!-- 정렬용 더미 -->
                 </ul>
               </div>
             </div>
+            <div></div> <!-- 정렬용 더미 -->
           </div>
         </div>
 
@@ -68,76 +80,83 @@
                   <div class="subSwiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <div class="inner">
-                           <h1>메인 텍스트1</h1>
-                        </div>
-                        <img src="./assets/img/1.jpg" alt="">
+                          <div class="subSwiper1-1">
+                           <h4 style="margin-bottom: 48px;color: #FFFFFFCC;">Wow System & Technology</h4>
+                           <h1 style="font-size: 65px; color: white;">임베디드 제어계측의</h1>
+                           <h1 style="font-size: 65px; color: white;">혁신을 이끕니다</h1>
+                          </div>
+                        <img src="./assets/img/mainSwipeImg1.png" alt="">
 
                       </div>
                       <div class="swiper-slide">
-                        <div class="inner">
                            <h1>메인 텍스트2</h1>
-                        </div>
                         <img src="./assets/img/5.jpg" alt="">
                       </div>
                       <div class="swiper-slide">
-                        <div class="inner">
                           <h1>메인 텍스트3</h1>
-                        </div>
                         <img src="./assets/img/4.jpg" alt="">
                       </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-scrollbar"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                  <div class="scrollIconWrap">
+                    <div class="scrollIcon">
+                      <div class="scrollIconBall"></div>
                     </div>
                   </div>
               </div>
               <div class="swiper-slide" >
-                <div class="inner">
-                  <h1>서비스 요약 섹션</h1>
-                </div>
-                <img src="./assets/img/2.jpg" alt="">
+                  <div class="mainSwiper2TextWrap">
+                    <h5 style="color: #FFFFFF66;">Core Technologies and Services</h5>
+                    <h1 style="font-size: 60px; color: white; font-weight: 600;">핵심기술과 서비스</h1>
+                  </div>
+                  <div class="mainSwiper2CardWrap">
+                    <div class="mainSwiper2Card">
+                      <img src="./assets/img/mainCardImg1.png" alt="">
+                    </div>
+                    <div class="mainSwiper2Card">
+                      <img src="./assets/img/mainCardImg2.png" alt="">
+                    </div>
+                    <div class="mainSwiper2Card">
+                      <img src="./assets/img/mainCardImg3.png" alt="">
+                    </div>
+                  </div>
+                <img src="./assets/img/mainSwipeImg2.png" alt="">
               </div>
               <div class="swiper-slide" >
                 <div class="inner">
                   <h1>회사 특징 및 장점</h1>
                 </div>
-                <img src="./assets/img/3.jpg" alt="">
+                <img src="./assets/img/mainSwipeImg3.png" alt="">
               </div>
             </div>
+
+            <!-- Swiper Navigation -->
+            <div class="swiperNavigationWrap white">
+              <button class="swiperNavigation on">
+                <div class="circle"></div>
+                <span>01</span>
+              </button>
+              <button class="swiperNavigation">
+                <div class="circle"></div>
+                <span>02</span>
+              </button>
+              <button class="swiperNavigation">
+                <div class="circle"></div>
+                <span>03</span>
+              </button>
+            </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div>
             <div class="swiper-scrollbar"></div>
             <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-prev"></div> -->
         </div>
 
-        <div class="inner mainFooterInner">
-          <div class="footer">
-            <div class="companyInformation">
-              <span>회사 주소, 연락처, 이메일</span>
-              <span>사업자 등록자 번호</span>
-            </div>
-            <div class="snsWrap">
-              <a href="">네이버
-                <div class="snsImg">
-                  아이콘
-                </div>
-              </a>
-              <a href="">유튜브
-                <div class="snsImg">
-                  아이콘
-                </div>
-              </a>
-              <a href="">인스타그램
-                <div class="snsImg">
-                  아이콘
-                </div>
-              </a>
-              <a href="">카카오
-                <div class="snsImg">
-                  아이콘
-                </div>
-              </a>
-            </div>
-        </div>
+        
     </div>
 
 
