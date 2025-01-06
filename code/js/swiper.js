@@ -34,20 +34,26 @@ var swiper = new Swiper(".mainSwiper", {
 
         switch (this.swiper.realIndex) {
           case 0:
-            headerClassChanger("white");
+            whiteClassChanger("white");
             break;
           case 1:
-            headerClassChanger("white");
+            whiteClassChanger("white");
             break;
           default:
-            headerClassChanger("default");
+            whiteClassChanger("default");
             break;
         }
       }
     },
   },
 });
-const headerClassChanger = (toggle) => {
+/**
+ * white 클래스 컨트롤러
+ * 대상 header, swiperNavigation 의 클래스에 white를 추가하거나 제거
+ * @why - 배경이 어두울땐 white로 밝을땐 default로 색을 바꿔주며 가시성 확보를 위해 필요
+ * @param {*} toggle - "white" or "default" 가 들어옴
+ */
+const whiteClassChanger = (toggle) => {
   if (toggle === "white") {
     document.querySelector(".header").classList.add("white");
     document.querySelector(".swiperNavigationWrap").classList.add("white");
@@ -56,6 +62,10 @@ const headerClassChanger = (toggle) => {
     document.querySelector(".swiperNavigationWrap").classList.remove("white");
   }
 };
+/**
+ * Swiper Navigation의 클래스 컨트롤러
+ * @param {*} index 
+ */
 const swiperNavigationChanger = (index) => {
   swiperNavigation.forEach((item) => {
     item.classList.remove("on");

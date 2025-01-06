@@ -109,6 +109,7 @@ var {
     --third-color : #8a8a8a;
 
     --background-gray-color : #F9F9F9;
+    --border-gray-color : #E4E4E4;
 
 }
 
@@ -134,11 +135,11 @@ h5 {
 }
 p {
   font-size: var(--p-size);
-  font-weight: 500;
+  font-weight: 400;
 }
 span {
   font-size: var(--span-size);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 body {
