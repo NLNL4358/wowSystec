@@ -9,11 +9,11 @@ $(document).ready(() => {
     PAS_EMBEDDED_URL : "/page/pas/PAS_embedded.html",
     PAS_SOLUTION_URL : "/page/pas/PAS_solution.html",
     PAS_CASE_URL : "/page/pas/PAS_case.html",
-    TECH_INTRODUCTION_URL : "page/tech/Tech_introduction.html",
-    TECH_DEVELOPMENT_URL : "page/tech/Tech_development.html",
-    TECH_PATENT_URL : "page/tech/Tech_patent.html",
-    CLIENT_CASE_URL : "page/client/Client_case.html",
-    CLIENT_REVIEW_URL : "page/client/Client_review.html",
+    TECH_INTRODUCTION_URL : "/page/tech/Tech_introduction.html",
+    TECH_DEVELOPMENT_URL : "/page/tech/Tech_development.html",
+    TECH_PATENT_URL : "/page/tech/Tech_patent.html",
+    CLIENT_CASE_URL : "/page/client/Client_case.html",
+    CLIENT_REVIEW_URL : "/page/client/Client_review.html",
     CONTACT_URL: "/page/contact/contact.html",
   };
 
