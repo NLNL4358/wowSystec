@@ -16,13 +16,7 @@ $(document).ready(() => {
     CLIENT_REVIEW_URL : "page/client/Client_review.html",
     CONTACT_URL: "/page/contact/contact.html",
   };
-  const gnbUrlArray = [
-    "INTRODUCTION_URL",
-    "PAS_EMBEDDED_URL",
-    "TECH_INTRODUCTION_URL",
-    "CLIENT_CASE_URL",
-    "CONTACT_URL",
-  ];
+
 
   /*** DOM */
   const gnb = document.querySelectorAll(".gnb");
@@ -93,7 +87,7 @@ $(document).ready(() => {
   /*** Event */
   gnb?.forEach((element, index) => {
     element.addEventListener("click", () => {
-      goToPage(gnbUrlArray[index]);
+      goToPage(element.dataset.url);
     });
   });
   snb?.forEach((element, index) => {
