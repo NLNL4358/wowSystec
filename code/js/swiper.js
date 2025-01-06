@@ -79,6 +79,7 @@ var subSwiper = new Swiper(".subSwiper", {
 
   pagination: {
     el: ".swiper-pagination",
+    clickable: true, // 버튼 클릭 여부
   },
 
   // navigation
@@ -87,3 +88,11 @@ var subSwiper = new Swiper(".subSwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+/*** Event */
+swiperNavigation.forEach((item,index) => {
+  item.addEventListener("click", () => {
+    swiper.slideTo(index, 1000, false);
+  })
+})
