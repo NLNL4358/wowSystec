@@ -22,9 +22,6 @@ $(document).ready(() => {
   const gnb = document.querySelectorAll(".gnb");
   const logoButton = document.querySelector(".logoButton");
   const header = document.querySelector(".header");
-  const snbWrap = document.querySelector(".snbWrap");
-  const snb = document.querySelectorAll(".snb");
-  const snbLi = document.querySelectorAll(".snb>li")
   const topButton = document.querySelector(".topButton");
 
   /*** Function */
@@ -66,16 +63,6 @@ $(document).ready(() => {
     }
   };
 
-  const snbControl = (toggle) => {
-    switch (toggle) {
-      case "on":
-        snbWrap.classList.add("on");
-        break;
-      case "off":
-        snbWrap.classList.remove("on");
-        break;
-    }
-  };
 
   const goTop = () => {
     window.scrollTo({
@@ -85,33 +72,31 @@ $(document).ready(() => {
   };
 
   /*** Event */
-  gnb?.forEach((element, index) => {
+  gnb?.forEach((element) => {
     element.addEventListener("click", () => {
-      goToPage(element.dataset.url);
+        const type = element.dataset?.type
+        const index = element.dataset?.index
+        const url = element.dataset?.url
+
+        switch (type) {
+          case "swipe" : 
+            if(window.location.pathname === '/' || window.location.pathname === '/index.html')
+            {
+              window.swiper.slideTo(index, 1000, false);
+            } else{
+              window.location.href = `/?index=${index}`
+            }
+            break
+          case "move" :
+            window.location.href = url;    
+        }
     });
   });
-  snb?.forEach((element, index) => {
-    element.addEventListener("mouseover", () => {
-      gnb[index].classList.add("hover");
-    });
-    element.addEventListener("mouseout", () => {
-      gnb[index].classList.remove("hover");
-    });
-  });
-  snbLi?.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      goToPage(item.dataset.url)
-    })
-  })
+
   logoButton?.addEventListener("click", () => {
     goToPage("HOME");
   });
-  header?.addEventListener("mouseover", () => {
-    snbControl("on");
-  });
-  header?.addEventListener("mouseout", () => {
-    snbControl("off");
-  });
+
   topButton?.addEventListener("click", () => {
     goTop();
   });

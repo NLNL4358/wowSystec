@@ -118,8 +118,13 @@
   height: 56px;
   border-bottom: 1px solid #FFFFFF2E;
   pointer-events: none;
+  position: relative;
 }
 .breadcrumbInner{
+  position: absolute;
+  top: 50%;
+  left: 240px;
+  transform: translate(0%, -50%);
   max-width: 1440px;
   height: 100%;
   pointer-events: none;
