@@ -9,14 +9,14 @@
   font-family: "Pretendard Variable", sans-serif;
   box-sizing: border-box;
 
-  font-size: 15px;
+  font-size: 17px;
   font-weight: normal;
   pointer-events: auto;
   white-space: nowrap;
 
   /* 중요! print시 배경색을 브라우저가 빼버리는데 아래의 CSS가 있다면 적용시켜줄 수 있다. */
-  print-color-adjust : exact;
-  -webkit-print-color-adjust : exact;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
 }
 a,
 abbr,
@@ -93,24 +93,21 @@ var {
 }
 
 :root {
-    /* size - html 기본값 15px 기준*/
-    --h1-size: 3.5rem; /* px; */
-    --h2-size: 2.666rem; /* 40px */
-    --h3-size: 1.666rem; /* 25px */
-    --h4-size: 1.4rem; /* 21px */
-    --h5-size: 1.2666rem; /* 19px */
-    --p-size: 1.133rem; /* 17px */
-    --span-size: 1rem; /* 15px */
-    --small-size: 0.87rem; /* 13px */
+  /* size - html 기본값 17px 기준*/
+  --h1-size: 3.823rem; /* 65px; */
+  --h2-size: 3.235rem; /* 55px */
+  --h3-size: 2.117rem; /* 36px */
+  --h4-size: 1.411rem; /* 24px */
+  --h5-size: 1.235rem; /* 21px */
+  --p-size: 1.117rem; /* 19px */
+  --span-size: 1rem; /* 17px */
+  --small-size: 0.88rem; /* 15px */
 
-    --text-title-color : #1D1D1D;
-    --primary-color : #3069e2;
-    --secondary-color : #dce9f7;
-    --third-color : #8a8a8a;
+  --text-title-color: #171717;
+  --primary-color: #3078cb;
 
-    --background-gray-color : #F9F9F9;
-    --border-gray-color : #E4E4E4;
-
+  --background-gray-color: #f9f9f9;
+  --border-gray-color: #e4e4e4;
 }
 
 h1 {
