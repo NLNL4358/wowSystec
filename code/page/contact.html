@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
   </head>
   <body>
-    <div class="outer">
+    <div class="outer contact">
       <div class="inner headerInner subPage">
         <div class="header">
           <div class="headerLogoWrap">
@@ -38,7 +38,7 @@
                 제품 및 서비스
               </li>
               <li class="gnb" data-type="move" data-url="/page/contact.html">
-                <button class="contactButton">
+                <button class="gradationButton gnbButton">
                   <div class="smallWrap">
                     <small>문의하기</small>
                   </div>
@@ -51,50 +51,104 @@
         </div>
       </div>
 
-      <div class="headBackground">
-        <h1 class="subPageTitle">문의하기</h1>
-        <img
-          class="headBackgroundImage"
-          src="/assets/img/headBack.png"
-          alt=""
-        />
-        <div class="depth2Wrap">
-          <button class="depth2">2 Depth</button>
-          <button class="depth2">2 Depth</button>
-          <button class="depth2">2 Depth</button>
+      <div class="inner headBackgroundInner">
+        <div class="headBackground contact">
+          <h3 class="subPageTitle">
+            와우시스텍은 신뢰할 수 있는 기술 파트너로서
+          </h3>
+          <h3 class="subPageTitle">
+            10년 이상 고객 중심의 서비스와 고품질 서비스를 제공하기 위해
+          </h3>
+          <h3 class="subPageTitle">최선의 노력을 다하고 있습니다.</h3>
         </div>
       </div>
 
-      <div class="inner">
-        <div class="titleSection">
-          <h4 class="miniTitle">title</h4>
-          <h1 class="title">title</h1>
+      <div class="inner contactMain">
+        <div class="contactLeft">
+          <h2>문의하기</h2>
+          <h4>와우시스텍에 문의를 해보세요</h4>
+          <img src="../assets/img/contactBackground2.png" alt="" />
         </div>
-
-        <form id="email-form">
-          <label for="name">회사명:</label>
-          <input type="text" id="company" name="company" required /><br />
-
-          <label for="name">담당자명:</label>
-          <input type="text" id="manager" name="manager" required /><br />
-
-          <label for="name">연락처:</label>
-          <input type="text" id="phone" name="phone" required /><br />
-
-          <label for="name">이메일:</label>
-          <input type="email" id="email" name="email" required /><br />
-
-          <label for="name">부서:</label>
-          <input type="text" id="department" name="department" required /><br />
-
-          <label for="name">직책:</label>
-          <input type="text" id="position" name="position" required /><br />
-
-          <label for="message">견적요청/문의내용</label>
-          <textarea id="content" name="content" required></textarea><br />
-
-          <button type="submit">문의하기</button>
+        <form id="email-form" class="mailWrap">
+          <div>
+            <div class="emailInput">
+              <label for="company">회사 및 소속</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                required
+                placeholder="소속을 입력해주세요"
+              />
+            </div>
+            <div class="emailInput">
+              <label for="manager">이름</label>
+              <input
+                type="text"
+                id="manager"
+                name="manager"
+                required
+                placeholder="이름을 입력해주세요"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="emailInput">
+              <label for="phone">연락처</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="숫자만 입력해주세요"
+              />
+            </div>
+            <div class="emailInput">
+              <label for="email">이메일</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="이메일 주소를 입력해주세요"
+              />
+            </div>
+          </div>
+          <div class="emailInput content">
+            <label for="content">견적요청/문의내용</label>
+            <textarea
+              id="content"
+              name="content"
+              required
+              placeholder="문의 내용을 입력해주세요"
+            ></textarea>
+          </div>
+          <button class="gradationButton contact" type="submit">
+            <div class="smallWrap">
+              <small>문의하기</small>
+            </div>
+          </button>
         </form>
+      </div>
+
+      <div class="inner contactMap">
+        <div class="contactLeft">
+          <h2>오시는 길</h2>
+          <div>
+            <h4>대전광역시 유성구 테크노4로 17</h4>
+            <h4>대덕비즈센터 B동 2층 209호 (관평동)</h4>
+          </div>
+          <div style="margin-top: 1rem">
+            <h4>#B-209, 17, Techno 4-ro, Yuseong-gu,</h4>
+            <h4>Daejeon, Republic of Korea</h4>
+          </div>
+          <div class="phoneWrap">
+            <p>대표전화 042-931-8775</p>
+            <p>팩스 042-931-8776</p>
+            <p>메일 info@wowsystec.com</p>
+          </div>
+        </div>
+        <div class="mapWrap"></div>
       </div>
 
       <div class="inner footerInner">

@@ -116,9 +116,7 @@
 .gnb.hover {
   border-bottom: 1px solid white;
 }
-.contactButton {
-  width: 95px;
-  height: 43px;
+.gradationButton {
   gap: 10px;
   border-radius: 28px;
 
@@ -128,19 +126,34 @@
   justify-content: center;
   align-items: center;
 }
-.contactButton > .smallWrap {
+.gradationButton.gnbButton {
+  width: 95px;
+  height: 43px;
+}
+.gradationButton > .smallWrap {
   display: flex;
   justify-content: center;
   align-items: center;
 
   border-radius: 28px;
-  width: 91px;
-  height: 39px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
   background-color: rgb(234, 247, 252);
+
+  transition: 0.5s;
 }
-.contactButton > .smallWrap > small {
+.gradationButton:active > .smallWrap {
+  background-color: transparent;
+}
+.gradationButton > .smallWrap > small {
   font-weight: 600;
   background: -webkit-linear-gradient(90deg, #28aae0 0%, #70be6e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s;
+}
+.gradationButton:active > .smallWrap > small {
+  background: white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -236,62 +249,29 @@
   transition-delay: 0.2s;
   opacity: 1;
 }
+.headBackgroundInner {
+  width: 100%;
+  padding: 32px 40px;
+}
 .headBackground {
   width: 100%;
-  height: 656px;
+  height: 100%;
   /* overflow: hidden; */
 
   position: relative;
 
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   justify-content: center;
   align-items: center;
+
+  background-image: url("../assets/img/contactBackground.png");
+  background-size: cover;
 }
+
 .headBackground > .subPageTitle {
-  font-size: 65px;
   color: white;
-}
-.headBackground > .headBackgroundImage {
-  width: auto;
-  max-width: 100%;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  position: absolute;
-  z-index: -1;
-}
-.headBackground > .depth2Wrap {
-  position: absolute;
-  left: 50%;
-  bottom: 0%;
-
-  transform: translate(-50%, 50%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.headBackground .depth2 {
-  width: 236px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: #e8e8e8;
-  position: relative;
-}
-.headBackground .depth2::after {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 35px;
-  background-color: #d9d9d9;
-  right: 0;
-}
-.headBackground .depth2:last-of-type:after {
-  display: none;
 }
 .footerInner {
   padding: 48px 0px 40px 0px;
@@ -405,17 +385,4 @@
 .topButton > span {
   font-weight: 500;
   color: white;
-}
-.titleSection {
-  margin-top: 146px;
-}
-.miniTitle {
-  color: #00000066;
-  margin-bottom: 25px;
-  text-align: center;
-}
-.title {
-  font-size: 50px;
-  font-weight: 500;
-  text-align: center;
 }

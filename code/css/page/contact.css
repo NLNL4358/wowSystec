@@ -1,4 +1,129 @@
-.googleMap{
-    width: 100%;
-    height: 900px;
+.outer.contact {
+  background-color: rgba(241, 241, 241, 1);
+  height: max-content;
+}
+
+.headBackground.contact {
+  height: 737px;
+}
+.contactMain {
+  padding: 20px 40px;
+  min-height: 701px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  position: relative;
+}
+.contactLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contactLeft > h2,
+.contactLeft > h4 {
+  z-index: +1;
+}
+.contactLeft > img {
+  position: absolute;
+  top: 0;
+  left: -88px;
+  height: 100%;
+  width: auto;
+}
+.mailWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  width: 55.3%;
+}
+.mailWrap > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.emailInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.emailInput.content {
+  align-items: flex-start;
+  gap: 16px;
+}
+.mailWrap label {
+  font-size: var(--h4-size);
+  font-weight: 600;
+}
+.emailInput > input {
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 8px;
+
+  background-color: white;
+  padding: 15px 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.2s;
+}
+.emailInput > textarea {
+  width: 100%;
+  height: 320px;
+  padding: 20px 24px;
+
+  resize: none;
+
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.emailInput > input:focus,
+.emailInput > textarea:focus {
+  border: 1px solid var(--primary-color);
+}
+.gradationButton.contact {
+  margin-left: auto;
+  width: 184px;
+  height: 55px;
+}
+.gradationButton.contact small {
+  font-size: var(--p-size);
+}
+
+.contactMap {
+  padding: 20px 40px;
+  margin-top: 240px;
+  padding-bottom: 176px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contactMap .contactLeft {
+  min-height: 461px;
+
+  display: flex;
+  gap: 0px;
+}
+
+.contactMap .contactLeft h2 {
+  margin-bottom: 55px;
+}
+.contactMap h4 {
+  font-weight: 400;
+}
+.phoneWrap {
+  margin-top: auto;
+}
+.mapWrap {
+  width: 55.3%;
+  height: 461px;
+
+  background: url("../../assets/img/contactMap.png");
+  background-size: cover;
 }
