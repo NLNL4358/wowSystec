@@ -274,7 +274,7 @@
   color: white;
 }
 .footerInner {
-  padding: 48px 0px 40px 0px;
+  padding: 60px 0px 80px 0px;
   background-color: var(--background-gray-color);
 }
 .footer {
@@ -303,67 +303,48 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px;
+  gap: 20px;
 }
 
-.about p strong {
+.about span strong {
   font-size: var(--p-size);
   font-weight: 700;
 }
-.fnb {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-}
-.fnbGnb {
-  width: 140px;
-}
-.fnbGnb > ul {
+.copyright {
+  margin: auto 0px 0px auto;
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.fnbGnb > ul > li:nth-of-type(1) {
-  margin-bottom: 20px;
-}
-.fnbGnb > ul > li:nth-of-type(1) > a {
-  font-size: var(--p-size);
-  font-weight: 700;
-}
-.fnbGnb > ul > li {
-  margin-bottom: 10px;
-}
-.fnbGnb > ul > li > a {
-  font-size: var(--span-size);
-  font-weight: 500;
-}
-.copyright > span {
-  color: #555555;
-  font-weight: 400;
-}
-.social {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
-  padding-left: 20px;
+  align-items: flex-end;
+  gap: 1rem;
 }
 .socialIconButton {
   width: 40px;
   height: 40px;
-  border: 1px solid var(--border-gray-color);
   border-radius: 50%;
+  border: 1px solid rgb(180, 180, 180);
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2;
 }
-.socialIconButton > a {
+
+.socialIconButton:active {
+  box-shadow: 0px 0px 3px rgb(180, 180, 180);
+}
+.socialIconButton a {
   width: 100%;
   height: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.copyright span {
+  color: #555555;
 }
 
 .topButton {
