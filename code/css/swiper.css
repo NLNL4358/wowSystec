@@ -5,26 +5,49 @@
   overflow: hidden;
 }
 .swiper-slide {
-  display: flex !important;
   width: 100% !important;
   height: 100% !important;
-  justify-content: center;
-  align-items: center;
 
   position: relative;
 }
-.swiper-slide > img {
-  min-width: 100%;
+.swiperInner {
+  padding: 120px 40px 0px 40px;
   width: 100%;
-  height: auto;
   height: 100%;
-  min-height: 100%;
-  max-height: 100%;
+
+  overflow: hidden;
+}
+
+.swiper1Title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.swiper1Img {
+  width: 100%;
+  height: clamp(500px, 70vh, 756px);
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 59.18%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+
+  position: relative;
+
+  overflow: hidden;
+}
+.swiper1Img > img {
   position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  opacity: 1;
+  min-width: 100%;
+  width: auto;
+  min-height: 100%;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
 }
 
 .swiper-pagination {
@@ -83,6 +106,7 @@
   position: absolute;
   left: 40px;
   top: 50%;
+  transform: translate(0%, -50%);
   z-index: +1;
 
   display: flex;
@@ -108,7 +132,7 @@
 
   transition: 0.5s;
 }
-.white .swiperNavigation  > .circle {
+.white .swiperNavigation > .circle {
   border: 1px solid white;
 }
 .swiperNavigation.on > .circle {

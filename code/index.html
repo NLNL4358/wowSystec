@@ -1,119 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>와우시스텍</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/swiper.css">
-    <link rel="stylesheet" href="./css/page/main.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/page/main.css" />
 
     <!-- JQuery -->
     <script
-    src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-     
-     <!-- Swiper -->
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper -->
     <link
-     rel="stylesheet"
-     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="outer">
-        <div class="mainHeaderInner">
-          <div class="header white">
-            <div class="headerLogoWrap">
-              <button class="logoButton">
-                <img class="logoWhite" src="/assets/img/logo.svg" alt="">
-                <img class="logoBlack" src="/assets/img/logoBlack.svg" alt="">
-              </button>
-            </div>
-            <div class="headerNav">
-              <ul class="gnbWrap">
-                <li class="gnb" data-type="swipe" data-index="1">회사소개</li>
-                <li class="gnb" data-type="swipe" data-index="2">핵심 역량</li>
-                <li class="gnb" data-type="swipe" data-index="3">제품 및 서비스</li>
-                <li class="gnb" data-type="move" data-url="/page/contact.html">문의하기</li>
-              </ul>
-            </div>
-            <div></div> <!-- 정렬용 더미 -->
+      <div class="mainHeaderInner">
+        <div class="header">
+          <div class="headerLogoWrap">
+            <button class="logoButton">
+              <img class="logo" src="/assets/img/logoBlack.svg" alt="" />
+            </button>
           </div>
+          <div class="headerNav">
+            <ul class="gnbWrap">
+              <li class="gnb" data-type="swipe" data-index="1">회사소개</li>
+              <li class="gnb" data-type="swipe" data-index="2">핵심기술</li>
+              <li class="gnb" data-type="swipe" data-index="3">
+                제품 및 솔루션
+              </li>
+              <li class="gnb" data-type="move" data-url="/page/contact.html">
+                <button class="gradationButton gnbButton">
+                  <div class="smallWrap">
+                    <small>문의하기</small>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div></div>
+          <!-- 정렬용 더미 -->
+        </div>
+      </div>
+
+      <!-- 스와이퍼 -->
+      <div class="mainSwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide inner swiperInner">
+            <div class="swiper1Title">
+              <h1>임베디드 제어계측의<br />혁신을 이끕니다</h1>
+              <p>wow systec & technology</p>
+            </div>
+            <div class="swiper1Img">
+              <img src="./assets/img/swiper1Img.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide inner swiperInner">2</div>
+          <div class="swiper-slide inner swiperInner">3</div>
+          <div class="swiper-slide inner swiperInner">4</div>
         </div>
 
-        <!-- 스와이퍼 -->
-        <div class="mainSwiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide" >
-                <div class="subSwiper1-1">
-                  <h4 style="margin-bottom: 48px;color: #FFFFFFCC;">Wow System & Technology</h4>
-                  <h1 style="font-size: 65px; color: white;">임베디드 제어계측의</h1>
-                  <h1 style="font-size: 65px; color: white;">혁신을 이끕니다</h1>
-                 </div>
-               <img src="./assets/img/mainSwipeImg1.png" alt="">
-              </div>
-              <div class="swiper-slide" >
-                  <div class="mainSwiper2TextWrap">
-                    <h5 style="color: #FFFFFF66;">Core Technologies and Services</h5>
-                    <h1 style="font-size: 60px; color: white; font-weight: 600;">핵심기술과 서비스</h1>
-                  </div>
-                  <div class="mainSwiper2CardWrap">
-                    <div class="mainSwiper2Card">
-                      <img src="./assets/img/mainCardImg1.png" alt="">
-                    </div>
-                    <div class="mainSwiper2Card">
-                      <img src="./assets/img/mainCardImg2.png" alt="">
-                    </div>
-                    <div class="mainSwiper2Card">
-                      <img src="./assets/img/mainCardImg3.png" alt="">
-                    </div>
-                  </div>
-                <img src="./assets/img/mainSwipeImg2.png" alt="">
-              </div>
-              <div class="swiper-slide" >
-                <div class="inner">
-                  <h1>회사 특징 및 장점</h1>
-                </div>
-                <img src="./assets/img/mainSwipeImg3.png" alt="">
-              </div>
-            </div>
-
-            <!-- Swiper Navigation -->
-            <div class="swiperNavigationWrap white">
-              <button class="swiperNavigation on">
-                <div class="circle"></div>
-                <span>01</span>
-              </button>
-              <button class="swiperNavigation">
-                <div class="circle"></div>
-                <span>02</span>
-              </button>
-              <button class="swiperNavigation">
-                <div class="circle"></div>
-                <span>03</span>
-              </button>
-            </div>
-            <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div>
+        <!-- Swiper Navigation -->
+        <div class="swiperNavigationWrap">
+          <button class="swiperNavigation on">
+            <div class="circle"></div>
+            <span>01</span>
+          </button>
+          <button class="swiperNavigation">
+            <div class="circle"></div>
+            <span>02</span>
+          </button>
+          <button class="swiperNavigation">
+            <div class="circle"></div>
+            <span>03</span>
+          </button>
+          <button class="swiperNavigation">
+            <div class="circle"></div>
+            <span>04</span>
+          </button>
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div>
             <div class="swiper-scrollbar"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div> -->
-        </div>
-
-        
+      </div>
     </div>
 
-
     <!-- JS -->
-     <script src="/js/index.js"></script>
-     <script src="/js/swiper.js"></script>
-</body>
+    <script src="/js/index.js"></script>
+    <script src="/js/swiper.js"></script>
+  </body>
 </html>

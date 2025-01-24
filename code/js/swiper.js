@@ -18,7 +18,7 @@ const whiteClassChanger = (toggle) => {
 };
 /**
  * Swiper Navigation의 클래스 컨트롤러
- * @param {*} index 
+ * @param {*} index
  */
 const swiperNavigationChanger = (index) => {
   swiperNavigation.forEach((item) => {
@@ -33,26 +33,26 @@ const swiperNavigationChanger = (index) => {
  */
 const getTargetSlide = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('index');
-}
+  return urlParams.get("index");
+};
 
 /***
  * 페이지 로드됐을때 위의 getTargetSlide 를 호출하며 slide 이동하는 함수
  */
 const moveSlideWhenInit = () => {
-  const targetSlide = getTargetSlide()
-  if(targetSlide) {
-    swiper.slideTo(targetSlide, 1000, false) // target 값이 존재하면 해당 슬라이드로 이동
+  const targetSlide = getTargetSlide();
+  if (targetSlide) {
+    swiper.slideTo(targetSlide, 1000, false); // target 값이 존재하면 해당 슬라이드로 이동
     history.replaceState(null, null, window.location.pathname); // target 파라미터를 제거
   }
-}
+};
 
 /*** Event */
-swiperNavigation.forEach((item,index) => {
+swiperNavigation.forEach((item, index) => {
   item.addEventListener("click", () => {
     swiper.slideTo(index, 1000, false);
-  })
-})
+  });
+});
 
 /*** init */
 var swiper = new Swiper(".mainSwiper", {
@@ -100,14 +100,9 @@ var swiper = new Swiper(".mainSwiper", {
       }
     },
   },
-
 });
 
-  
 moveSlideWhenInit();
-
-
-
 
 /*** global */
 window.swiper = swiper;
