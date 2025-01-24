@@ -48,6 +48,190 @@
   left: 50%;
   top: 0%;
   transform: translate(-50%, 0%);
+
+  z-index: -1;
+}
+.scrollAnim {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+
+  transform: translate(-50%, -50%);
+
+  width: 26px;
+  height: 56px;
+  border: 1px solid white;
+  border-radius: 21px;
+}
+.scrollAnim > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.scrollAnim > div::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+
+  left: 50%;
+  top: 10px;
+
+  transform: translate(-50%);
+  animation-name: scrollDownAnim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes scrollDownAnim {
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 36px;
+    opacity: 0.1;
+  }
+}
+.scrollAnim > div::before {
+  position: absolute;
+  content: "Scroll";
+
+  left: 50%;
+  bottom: -12px;
+  transform: translate(-50%, 100%);
+  color: #ffffff99;
+}
+.swiper2Top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.swiper2Title {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.swiper2Certificate {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.certificate {
+  width: 180px;
+  height: 250px;
+
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 11px 13px;
+}
+.history {
+  z-index: +1;
+}
+.history * {
+  color: white;
+}
+.swiper2ScrollOuter {
+  width: 100%;
+  height: clamp(553px, 58vh, 756px);
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("../assets/img/swiper2Img.png");
+  background-position: center;
+  background-size: cover;
+
+  padding: 0px 150px;
+}
+.swiper2ScrollInner {
+  min-width: 100%;
+  width: max-content;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 16px;
+}
+.history {
+  width: 214px;
+  height: 4px;
+  background-color: white;
+  position: relative;
+}
+.history::before {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 0px;
+
+  transform: translate(-100%, -50%);
+
+  width: 16px;
+  height: 16px;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.history::after {
+  content: "";
+  position: absolute;
+
+  width: 1px;
+  height: 70px;
+  background-color: white;
+
+  left: -8px;
+  transform: translate(-50%);
+}
+.history.up::after {
+  bottom: 8px;
+}
+.history.down::after {
+  top: 8px;
+}
+.historyTitle {
+  left: -18px;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.history.up .historyTitle {
+  top: -80px;
+
+  transform: translate(0%, -100%);
+}
+.history.down .historyTitle {
+  bottom: -80px;
+
+  transform: translate(0%, 100%);
+}
+.historyTitle h3 {
+  margin-bottom: 20px;
+}
+.historyTitle span {
+  position: relative;
+  padding-left: 25px;
+}
+.historyTitle span::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+
+  left: 10px;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 .swiper-pagination {
