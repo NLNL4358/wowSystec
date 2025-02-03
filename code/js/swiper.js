@@ -1,5 +1,10 @@
 /*** DOM */
 const swiperNavigation = document.querySelectorAll(".swiperNavigation");
+const swiper2ScrollOuter = document.querySelector(".swiper2ScrollOuter");
+const swiper2ScrollInner = document.querySelector(".swiper2ScrollInner");
+
+/*** 변수 */
+let scrollX = 0;
 
 /**
  * white 클래스 컨트롤러
@@ -52,6 +57,22 @@ swiperNavigation.forEach((item, index) => {
   item.addEventListener("click", () => {
     swiper.slideTo(index, 1000, false);
   });
+});
+
+swiper2ScrollOuter.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  e.stopPropagation(); // Swiper로 이벤트 전달 방지
+
+  /* max : 40% | min : 0% */
+
+  if (e.deltaY > 0 && scrollX < 40) {
+    /* 휠 감지 : deltaY가 양수 -> 아래방향 | 음수 -> 위 방향 */
+    scrollX = scrollX + 5;
+  } else if (e.deltaY < 0 && scrollX > 0) {
+    scrollX = scrollX - 5;
+  }
+
+  swiper2ScrollInner.style.transform = `translate(-${scrollX}%)`;
 });
 
 /*** init */

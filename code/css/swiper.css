@@ -25,6 +25,9 @@
   align-items: flex-start;
   margin-bottom: 10px;
 }
+.swiper1Title > p {
+  color: #17171799;
+}
 
 .swiper1Img {
   width: 100%;
@@ -144,9 +147,18 @@
   background-position: center;
   background-size: cover;
 
+  border-radius: 8px;
+
   padding: 0px 150px;
+
+  position: relative;
+  overflow: hidden;
 }
 .swiper2ScrollInner {
+  position: absolute;
+  top: 0%;
+  left: 150px;
+
   min-width: 100%;
   width: max-content;
   height: 100%;
@@ -156,12 +168,18 @@
   align-items: center;
 
   gap: 16px;
+
+  transition: 0.5s;
+  transform: translate(-0%);
 }
 .history {
   width: 214px;
   height: 4px;
   background-color: white;
   position: relative;
+}
+.history:last-of-type {
+  background-color: transparent;
 }
 .history::before {
   content: "";
@@ -203,6 +221,30 @@
   flex-direction: column;
   gap: 5px;
 }
+.historyTitle .empty,
+.historyTitle .empty2 {
+  position: relative;
+  height: 20px;
+  width: 1px;
+}
+.historyTitle .empty::after,
+.historyTitle .empty2::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 10px;
+  top: 0px;
+  background-color: white;
+}
+.historyTitle .empty::after {
+  height: 100%;
+  transform: translate(-50%, calc(25% + 1px));
+}
+.historyTitle .empty2::after {
+  height: calc(100% + 5px);
+  transform: translate(-50%, calc(25% + -5.25px));
+}
+
 .history.up .historyTitle {
   top: -80px;
 
@@ -229,7 +271,7 @@
   background-color: white;
 
   left: 10px;
-  top: 50%;
+  top: 10px;
 
   transform: translate(-50%, -50%);
 }
